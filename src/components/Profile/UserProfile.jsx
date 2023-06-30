@@ -1,37 +1,38 @@
 import { FaUserFriends, FaEye, FaUserAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { AiFillLike, AiFillInstagram } from 'react-icons/ai';
 import PropTypes from 'prop-types';
+import { Profile, Description, Photo, UserName, UserTag, StatsList } from './UserProfile.styled';
 
 export default function UserProfile({ avatar, userName, tag, location, followers, views, likes }) {
   return (
-    <div className="profile">
-      <div className="description">
-        <img
+    <Profile>
+      <Description>
+        <Photo
           src={avatar}
           alt="User avatar"
-          className="avatar"
+          width="150"
         />
         
-        <p className="name"><FaUserAlt/>{userName}</p>
-        <p className="tag"><AiFillInstagram/>@{tag}</p>
-        <p className="location"><FaMapMarkerAlt/>{location}</p>
-      </div>
+        <UserName><FaUserAlt size='16'/>{userName}</UserName>
+        <UserTag><AiFillInstagram size='18'/>@{tag}</UserTag>
+        <p className="location"><FaMapMarkerAlt size='16'/>{location}</p>
+      </Description>
 
-      <ul className="stats">
+      <StatsList>
         <li>
-          <span className="label"><FaUserFriends/></span>
-          <span className="quantity">{followers}</span>
+          <FaUserFriends/>
+          <span>{followers}</span>
         </li>
         <li>
-          <span className="label"><FaEye/></span>
-          <span className="quantity">{views}</span>
+          <FaEye/>
+          <span>{views}</span>
         </li>
         <li>
-          <span className="label"><AiFillLike/></span>
-          <span className="quantity">{likes}</span>
+          <AiFillLike/>
+          <span >{likes}</span>
         </li>
-      </ul>
-    </div>
+      </StatsList>
+    </Profile>
   );
 }
 

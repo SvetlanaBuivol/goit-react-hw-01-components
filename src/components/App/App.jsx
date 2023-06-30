@@ -1,12 +1,13 @@
 import UserProfile from 'components/Profile/UserProfile';
-import Statistics from './Statistics/Statistics';
-import FriendList from './FriendList/FriendList';
-import TransactionHistory from './TransactionHistory/TransactionHistory';
+import Statistics from '../Statistics/Statistics';
+import FriendList from '../FriendList/FriendList/FriendList';
+import TransactionHistory from '../TransactionHistory/TransactionHistory';
 import { data, friends, transactions, user } from 'data';
+import { Container } from './App.styled';
 
 export default function App() {
   return (
-    <div>
+    <Container>
       <UserProfile
         userName={user.username}
         tag={user.tag}
@@ -19,6 +20,6 @@ export default function App() {
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </div>
+    </Container>
   );
 }
