@@ -1,7 +1,5 @@
-import { FaUserFriends, FaEye, FaLocationPin } from 'react-icons/fa';
+import { FaUserFriends, FaEye, FaUserAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { AiFillLike, AiFillInstagram } from 'react-icons/ai';
-import { BsFillPersonFill } from 'react-icons/bs';
-import { MdLocationOn } from 'react-icons/md';
 import PropTypes from 'prop-types';
 
 export default function UserProfile({ avatar, userName, tag, location, followers, views, likes }) {
@@ -14,9 +12,9 @@ export default function UserProfile({ avatar, userName, tag, location, followers
           className="avatar"
         />
         
-        <p className="name"><BsFillPersonFill/>{userName}</p>
+        <p className="name"><FaUserAlt/>{userName}</p>
         <p className="tag"><AiFillInstagram/>@{tag}</p>
-        <p className="location"><MdLocationOn/>{location}</p>
+        <p className="location"><FaMapMarkerAlt/>{location}</p>
       </div>
 
       <ul className="stats">

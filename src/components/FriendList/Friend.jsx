@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 export default function Friend({ isOnline, avatar, name }) {
   return (
     <li>
-      <span className={isOnline}></span>
+      <span status={isOnline.toString()}></span>
       <img src={avatar} alt={name} />
       <p>{name}</p>
     </li>
