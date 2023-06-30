@@ -10,7 +10,6 @@ export default function Statistics({ title, stats }) {
         {stats.map(({ id, label, percentage }) => {
           return (
             <StatsItem key={id} color={getRandomColor()}>
-
               <span>{label}</span>
               <span>{percentage}%</span>
             </StatsItem>

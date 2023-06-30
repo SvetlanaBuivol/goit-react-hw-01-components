@@ -3,7 +3,7 @@ import Friend from '../Friend/Friend';
 import { FriendContainer } from "./FriendList.styled";
 
 export default function FriendList({ friends }) {
-    console.log(friends)
+
   return (
     <FriendContainer>
       {friends.map(friend => (

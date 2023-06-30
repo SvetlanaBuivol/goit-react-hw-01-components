@@ -3,7 +3,7 @@ import { FriendCard, FriendPhoto, FriendName } from "./Friend.styled";
 
 export default function Friend({ isOnline, avatar, name }) {
   return (
-    <FriendCard status={isOnline.toString()}>
+    <FriendCard>
       <FriendPhoto src={avatar} alt={name} />
       <FriendName>{name}</FriendName>
       <span status={isOnline.toString()}></span>
