@@ -1,40 +1,23 @@
 import PropTypes from 'prop-types';
+import { Section, Title, StatsItem, StatsList, getRandomColor } from './Statistics.styled';
 
 export default function Statistics({ title, stats }) {
   return (
-    <section className="statistics">
-      {title && <h2>{title}</h2>}
+    <Section>
+      {title && <Title>{title}</Title>}
 
-      <ul>
+      <StatsList>
         {stats.map(({ id, label, percentage }) => {
           return (
-            <li className="item" key={id}>
-              <span className="label">{label}</span>
-              <span className="percentage">{percentage}%</span>
-            </li>
+            <StatsItem key={id} color={getRandomColor()}>
+
+              <span>{label}</span>
+              <span>{percentage}%</span>
+            </StatsItem>
           );
         })}
-      </ul>
-
-      {/* <ul class="stat-list">
-        <li class="item">
-          <span class="label">.docx</span>
-          <span class="percentage">4%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp3</span>
-          <span class="percentage">14%</span>
-        </li>
-        <li class="item">
-          <span class="label">.pdf</span>
-          <span class="percentage">41%</span>
-        </li>
-        <li class="item">
-          <span class="label">.mp4</span>
-          <span class="percentage">12%</span>
-        </li>
-      </ul> */}
-    </section>
+      </StatsList>
+    </Section>
   );
 }
 

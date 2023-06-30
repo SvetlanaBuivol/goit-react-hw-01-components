@@ -5,10 +5,11 @@ export const Profile = styled.div`
   flex-direction: column;
   align-items: center; 
   padding-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   background-color: #FAF9FB;
   border-radius: 8px;
   width: 350px;
+  cursor: default;
 
   transform: scale(1);
   transition: transform 250ms ease-in,
