@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import { FriendCard, FriendPhoto, FriendName } from "./Friend.styled";
 
 export default function Friend({ isOnline, avatar, name }) {
   return (
-    <li>
+    <FriendCard status={isOnline.toString()}>
+      <FriendPhoto src={avatar} alt={name} />
+      <FriendName>{name}</FriendName>
       <span status={isOnline.toString()}></span>
-      <img src={avatar} alt={name} />
-      <p>{name}</p>
-    </li>
+    </FriendCard>
   );
 }
 

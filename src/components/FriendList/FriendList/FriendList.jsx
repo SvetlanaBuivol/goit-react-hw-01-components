@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import Friend from '../Friend/Friend';
+import { FriendContainer } from "./FriendList.styled";
 
 export default function FriendList({ friends }) {
     console.log(friends)
   return (
-    <ul className="friend-list">
+    <FriendContainer>
       {friends.map(friend => (
           <Friend   
           key={friend.id}
@@ -13,7 +14,7 @@ export default function FriendList({ friends }) {
           name={friend.name}
           />
       ))}
-    </ul>
+    </FriendContainer>
   );
 }
 
